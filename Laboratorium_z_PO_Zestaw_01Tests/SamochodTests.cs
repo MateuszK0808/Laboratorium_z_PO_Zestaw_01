@@ -14,12 +14,12 @@ namespace Laboratorium_z_PO_Zestaw_01.Tests
         [TestMethod()]
         public void SamochodTest()
         {
-            var samochod = new Samochod();
-            Assert.AreEqual("nieznana", samochod.Marka);
-            Assert.AreEqual("nieznany", samochod.Model);
-            Assert.AreEqual(0, samochod.IloscDrzwi);
-            Assert.AreEqual(0, samochod.PojemnoscSilnika);
-            Assert.AreEqual(0.0, samochod.SrednieSpalanie);
+            var s1 = new Samochod();
+            Assert.AreEqual("nieznana", s1.Marka);
+            Assert.AreEqual("nieznany", s1.Model);
+            Assert.AreEqual(0, s1.IloscDrzwi);
+            Assert.AreEqual(0, s1.PojemnoscSilnika);
+            Assert.AreEqual(0.0, s1.SrednieSpalanie);
         }
 
         [TestMethod()]
@@ -33,6 +33,13 @@ namespace Laboratorium_z_PO_Zestaw_01.Tests
             Assert.AreEqual(2, s2.IloscDrzwi);
             Assert.AreEqual(800, s2.PojemnoscSilnika);
             Assert.AreEqual(7.6, s2.SrednieSpalanie);
+        }
+
+        [TestMethod()]
+        public void ObliczKosztPrzejazduTest()
+        {
+            var s2 = new Samochod("Syrena", "105", 2, 800, 7.6);
+            s2.ObliczKosztPrzejazdu(30.5, 4.85).Equals(11.2423);
         }
     }
 }
