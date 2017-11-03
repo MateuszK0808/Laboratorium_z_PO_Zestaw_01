@@ -32,8 +32,8 @@ namespace Laboratorium_z_PO_Zestaw_01.Tests
         [TestMethod()]
         public void WyprowadzSamochodTest()
         {
-            Samochod s1 = new Samochod("Fiat", "126p", 2, 650, 6.0);
-            Samochod s2 = new Samochod("Syrena", "105", 2, 800, 7.6);
+            Samochod s1 = new Samochod("Fiat", "126p", 2, 650, 6.0, "ABC 123");
+            Samochod s2 = new Samochod("Syrena", "105", 2, 800, 7.6, "CDE 456");
 
             Garaz g2 = new Garaz("ul. Garażowa 2", 2);
 

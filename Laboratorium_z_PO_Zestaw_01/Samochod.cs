@@ -14,6 +14,7 @@ namespace Laboratorium_z_PO_Zestaw_01
         private int pojemnoscSilnika;
         private double srednieSpalanie;
         private static int liczbaSamochodow = 0;
+        private string numberRejstracyjny;
 
         public Samochod()
         {
@@ -23,6 +24,7 @@ namespace Laboratorium_z_PO_Zestaw_01
             IloscDrzwi = 0;
             PojemnoscSilnika = 0;
             SrednieSpalanie = 0.0;
+            NumberRejstracyjny = "nieznana";
         }
 
         public Samochod(
@@ -30,7 +32,8 @@ namespace Laboratorium_z_PO_Zestaw_01
             string model_,
             int iloscDrzwi_,
             int pojemnoscSilnika_,
-            double srednieSpalanie_
+            double srednieSpalanie_,
+            string numberRejstracyjny_
             )
         {
             liczbaSamochodow++;
@@ -39,6 +42,7 @@ namespace Laboratorium_z_PO_Zestaw_01
             IloscDrzwi = iloscDrzwi_;
             PojemnoscSilnika = pojemnoscSilnika_;
             SrednieSpalanie = srednieSpalanie_;
+            NumberRejstracyjny = numberRejstracyjny_;
         }
 
         public string Marka
@@ -66,6 +70,11 @@ namespace Laboratorium_z_PO_Zestaw_01
             get { return srednieSpalanie; }
             set { srednieSpalanie = value; }
         }
+        public string NumberRejstracyjny
+        {
+            get { return numberRejstracyjny; }
+            set { numberRejstracyjny = value; }
+        }
 
         private double ObliczSpalanie(double dlugoscTrasy)
         {
@@ -87,6 +96,7 @@ namespace Laboratorium_z_PO_Zestaw_01
             Console.WriteLine("IlośćDrzwi: {0}", IloscDrzwi);
             Console.WriteLine("Pojemność silnika: {0}", PojemnoscSilnika);
             Console.WriteLine("Średnie spalanie: {0}", SrednieSpalanie);
+            Console.WriteLine("nrRejstracyjny: {0}", NumberRejstracyjny);
         }
 
         public static void WypiszIloscSamochodow()
